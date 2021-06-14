@@ -1,0 +1,24 @@
+# data_to_monitor: 
+data_to_monitor:    [ '201903',
+                      '201904',
+                      '201905',
+                      '201906',
+                      '201907',
+                      '201908',
+                      '201909',
+                      '201910',
+                      '201911',
+                      '201912']
+
+# data_root_path e.g. one path on windows system
+data_root_path: 'C://Users//Define//Location//Data_Folder' 
+
+# data file name
+features_filename: 'collected_data.csv'
+
+# reference data nae
+data_ref: '201903'
+
+# target name
+target: 'target'
+
