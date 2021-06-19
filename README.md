@@ -36,7 +36,5 @@ Train models for all possible Matcher ID AI, you can input following command:
     │
     └── precheck_app.py                <-- Scripts to visualize with multiple streamlit pages.  
 --------
-
-
-## Test monitoring functions
-** One app is deployed to heroku (https://precheckmonitor.herokuapp.com/). Users are able to test functions in repeat_times.py and precheck_metrics.py with simulated datasets. **
+## Precheck Effect Size
+**One app is deployed to heroku (https://precheckmonitor.herokuapp.com/). Users are able to test several effect size functions with simulated datasets.**
