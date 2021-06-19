@@ -21,7 +21,7 @@ Train models for all possible Matcher ID AI, you can input following command:
     │   │
     │   ├── repeat_times               <-- Find the optimal number of repeatition that generates stable CI range. 
     │   │
-    │   ├── precheck_metrics           <-- Precheck the stability & effectiveness of metrics with simulation amd behavior datasets
+    │   ├── precheck_metrics           <-- Precheck the stability & effectiveness of metrics with simulation or behavior datasets
     │   │
     │   ├── monitor_scores             <-- Build one pipeline for users to monitor scores of selected metrics.              
     │   │
