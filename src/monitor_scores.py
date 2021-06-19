@@ -20,7 +20,7 @@ def subsample_stratify(df, sub_num, target, feature, random_state=42, stratify=T
     """
     Stratify-based subsampling based on one feature in one pandas dataframe 
 
-    Input:
+    Parameters:
         df: one dataframe, 
         sub_num: integer, size of subsample
         target: string, target name used for stratification
@@ -28,7 +28,7 @@ def subsample_stratify(df, sub_num, target, feature, random_state=42, stratify=T
         random_state: integer, control randomness
         stratify: boolean, whether conduct stratification or not
 
-    Output: 
+    Returns: 
         1D numpy array, the subsample of one relevant feature 
     """
     if stratify == True:
@@ -49,7 +49,7 @@ def repeated_func_scores_behavior(data_root_path, data_a, data_b, features_filen
     """
     Compute  the mean & CI of input metric(s) based on one specific sample size
 
-    Input:
+    Parameters:
         data_root_path: root path 
         data_a: string name, upload one monthly folder used as the reference set
         data_b: string name, upload one incoming folder to compare based on one metric
@@ -67,7 +67,7 @@ def repeated_func_scores_behavior(data_root_path, data_a, data_b, features_filen
         target: string, stratify based on this column name
         feature: string, only return subsamples of data_a and data_b based on this feature
 
-    Output:
+    Returns:
         CI_ranges_func_df: one dataframe, 
                         index is the sample size, 
                         the df contains metric scores computed by input functions
@@ -135,7 +135,7 @@ def multi_compare_ab_scores(data_root_path, data_a, data_b_list, features_filena
     By default, one_ref_test is False when calculating the baseline (data_a), 
     and one_ref_test is True when comparing data_a with data_b.
 
-    Input:
+    Parameters:
         data_root_path: root path 
         data_a: string name, upload one monthly folder used as the reference set
         data_b_list:a list string names, they are names of folders that contain saved datasets
@@ -148,7 +148,7 @@ def multi_compare_ab_scores(data_root_path, data_a, data_b_list, features_filena
         feature: string, only return subsamples of data_a and data_b based on this feature
         alpha: float, one significant level used to compute percentile values
         
-    Output:
+    Returns:
         score_dict: dictionary, CI & mean score for each comparison between data_a and data_b
         all_scores: all scores computed with func and subsampling by comparing data_a and data_b 
     """  
@@ -187,7 +187,7 @@ def visual_monitor_behavior_list(data_b_list, score_dict, func, alpha=0.05,
     """ 
     Visualize CI and mean scores.
 
-    Input:
+    Parameters:
         data_b_list: list, a list of string names representing incoming datasets for comparisions
         score_dict: dictionary, CI & mean score for each comparison between data_a and data_b
         func: one defined function that returns one metric score
@@ -196,7 +196,7 @@ def visual_monitor_behavior_list(data_b_list, score_dict, func, alpha=0.05,
         repeat_num: integer, the number of repetitions for one selected sample size
         one_ref_test: True, Flase or String, subsampling methods 
         
-    Output: 
+    Returns: 
         NA
     """
     fig, axs = plt.subplots(1,2, figsize=(16, 5.5))
@@ -230,7 +230,7 @@ def monitor_behavior_func_pipeline(data_root_path, data_a, data_b_list, features
     """
     One pipeline to compute key statistics and all comparison scores. 
 
-    Input:
+    Parameters:
         data_root_path: root path 
         data_a: string name, upload one monthly folder used as the reference set
         data_b_list:a list string names, they are names of folders that contain saved datasets
@@ -245,7 +245,7 @@ def monitor_behavior_func_pipeline(data_root_path, data_a, data_b_list, features
         feature: string, only return subsamples of data_a and data_b based on this feature
         alpha: float, one significant level used to compute percentile values
         
-    Output:
+    Returns:
         score_dict: dictionary, CI & mean score for each comparison between data_a and data_b
         all_scores: all scores computed with func and subsampling by comparing data_a and data_b 
     """  

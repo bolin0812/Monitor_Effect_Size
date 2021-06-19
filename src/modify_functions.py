@@ -16,14 +16,14 @@ from scipy import stats
 import pingouin as pg
 
 """
-Input:
+Parameters:
 
 These functions are mainly used to compare two data sets: a and b.
 
     a: 2D numpy array, reference dataset
     b: 2D numpy array, incoming dataset 
 
-Output: 
+Returns: 
     score of one metric
     score can be one statistical score, p-value or effect size score. 
 """

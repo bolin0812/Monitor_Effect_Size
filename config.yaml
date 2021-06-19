@@ -10,15 +10,15 @@ data_to_monitor:    [ '201903',
                       '201911',
                       '201912']
 
-# data_root_path e.g. one path on windows system
-data_root_path: 'C://Users//Define//Location//Data_Folder' 
-
+# data_root_path
+data_root_path: 'C://Users//Define//Location//Data_Folder'
+# data_root_path: 'C:\Users\LIB0001\Downloads\Monitor_Guide_Test\Input_Drift_Data'
 # data file name
-features_filename: 'collected_data.csv'
+features_filename: 'preprocessed.csv'
 
 # reference data nae
 data_ref: '201903'
 
 # target name
-target: 'target'
+target: 'default'
 

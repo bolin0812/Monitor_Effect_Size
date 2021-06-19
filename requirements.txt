@@ -1,0 +1,11 @@
+pandas==1.2.3
+pingouin==0.3.10
+plotly==4.14.3
+PyYAML==5.4.1
+matplotlib==3.3.4
+numpy==1.20.1
+statsmodels==0.12.2
+scikit-learn==0.23.1
+scipy==1.6.1
+streamlit==0.79.0
+tqdm==4.59.0
