@@ -34,5 +34,5 @@ Train models for all possible Matcher ID AI, you can input following command:
     ├── config.yaml                    <-- Configuration parameters used to upload datasets.
     │
     │
-    └── prechec_app.py                 <-- Scripts to visualize with multiple streamlit pages.  
+    └── precheck_app.py                 <-- Scripts to visualize with multiple streamlit pages.  
 --------
