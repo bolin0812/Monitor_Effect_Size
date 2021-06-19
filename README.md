@@ -4,7 +4,7 @@ The main objective of this project is to evaluate effect size in the context of 
 <br/><br/>
 
 **Run Streamlit App**
-Train models for all possible Matcher ID AI, you can input following command:
+To find optimal number of repetitions and size of subsamples with simulated datasets, users can input following command:
 `streamlit run precheck_app.py`
 
 ## Project Organization
