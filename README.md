@@ -4,7 +4,7 @@ Evaluate and apply various effect sizes in the context of measuring data drifts.
 <br/><br/>
 
 ## Precheck App
-**One app is deployed to heroku (https://precheckmonitor.herokuapp.com/). Users are able to test several effect size functions with simulated datasets.**
+**One app is deployed to heroku (https://precheckmonitor.herokuapp.com/). Users can test several effect size functions with simulated datasets.**
 
 **Run Streamlit App**
 To find optimal number of repetitions and appropriate size of subsamples with simulated datasets, users can input following command and interactively test with one app:
