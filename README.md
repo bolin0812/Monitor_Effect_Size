@@ -1,6 +1,6 @@
 
 # Monitoring Precheck
-The main objective of this project is to evaluate effect sizes in the context of measuring data drifts.
+Evaluate statistical metrics and effect sizes in the context of measuring data drifts.
 <br/><br/>
 
 **Run Streamlit App**
