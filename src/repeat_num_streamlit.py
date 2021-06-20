@@ -43,7 +43,7 @@ def app():
     data_3sets = simulate_datasets(sample_selectbox, sample_size)
 
     subsample_size = st.slider(label = 'Select subsample size to compute confidence interval with different repetitions.',
-                                min_value = 1000,
+                                min_value = 10000,
                                 max_value = 200000,
                                 step=1000,
                                 key = 'subsample_size'
@@ -69,7 +69,7 @@ def app():
         
         st.write(f'\nPlot two different large datasets distributions.')
         st.pyplot(visual_two_simulate_dists(data_3sets[0], data_3sets[2], 
-                                            title=f'Each large dataset contains {sample_size} Observations'))
+                                            title=f'Each large dataset contains {sample_size} observations'))
         
         st.write(f'\nVisualize how CI changes with different number of repetition.')
         st.write(f'Subsample contains  is {subsample_size} observations.\nFollowing scores are computed by {metric_dict[metric_name].__name__}')

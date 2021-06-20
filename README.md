@@ -1,10 +1,10 @@
 
 # Monitoring Precheck
-The main objective of this project is to evaluate effect size in the context of measuring data drifts.
+The main objective of this project is to evaluate effect sizes in the context of measuring data drifts.
 <br/><br/>
 
 **Run Streamlit App**
-To find optimal number of repetitions and size of subsamples with simulated datasets, users can input following command:
+To find optimal number of repetitions and appropriate size of subsamples with simulated datasets, users can input following command and interactively test with one app:
 `streamlit run precheck_app.py`
 
 ## Project Organization
@@ -17,24 +17,25 @@ To find optimal number of repetitions and size of subsamples with simulated data
     │
     ├── src                   
     │   │
-    │   ├── modify_functions.py        <-- Modify functions (metrics) so they can be used as inputs of precheck functions or monitoring pipeline.
+    │   ├── modify_functions.py        <-- Modify functions or metrics, so they can be used as inputs of precheck functions or monitoring pipeline.
     │   │
     │   ├── repeat_times.py            <-- Find the optimal number of repeatition that generates stable CI range. 
     │   │
-    │   ├── precheck_metrics.py        <-- Precheck the stability & effectiveness of metrics with simulation or behavior datasets
+    │   ├── precheck_metrics.py        <-- Precheck the stability & the effectiveness of metrics with simulations or behavior datasets
     │   │
     │   ├── monitor_scores.py          <-- Build one pipeline for users to monitor scores of selected metrics.              
     │   │
-    │   ├── repeat_num_streamlit.py    <-- Interactively search the optimal number of repeatition based on one user's inputs
+    │   ├── repeat_num_streamlit.py    <-- Interactively search to find the optimal number of repeatition based on one user's inputs
     │   │
-    │   └── stable_effect_streamlit.py <-- Interactively check the  the stability & effectiveness of metrics based on one user's inputs
+    │   └── stable_effect_streamlit.py <-- Interactively check and evaluate the stability & the ffectiveness of metrics based on one user's inputs
     │
     │
     │
     ├── config.yaml                    <-- Configuration parameters used to upload datasets.
     │
     │
-    └── precheck_app.py                <-- Scripts to visualize with multiple streamlit pages.  
+    └── precheck_app.py                <-- Scripts to visualize with multiple pages in one streamlit app.  
 --------
+
 ## Precheck Effect Size
 **One app is deployed to heroku (https://precheckmonitor.herokuapp.com/). Users are able to test several effect size functions with simulated datasets.**

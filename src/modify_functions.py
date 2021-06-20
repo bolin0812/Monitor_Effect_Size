@@ -3,7 +3,7 @@
 
 
 """
-Modify functions (metrics) so they can be used as inputs of precheck functions or monitoring pipeline.
+Modify functions (metrics), so they can be used as inputs of precheck functions or monitoring pipeline.
 
 Version | Last Modified |    Author     | Commment
 ---------------------------------------------------------

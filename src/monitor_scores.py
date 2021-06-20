@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Build one pipeline for users to monitor scores of selected metrics. 
+Build one pipeline for users to monitor scores of selected metric(s). 
 
 Version | Last Modified |    Author     | Commment
 ---------------------------------------------------------

@@ -20,10 +20,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 def app():
     st.header('Stability & Effectiveness')
     
-    st.markdown('Evaluate the stability and effectiveness of one metric by changing the size for subsampling.\n')
+    st.markdown('Evaluate the stability and the effectiveness of one metric by changing the size for subsampling.\n')
 
     sample_size = st.number_input(
-                                label = 'Input one value used as the size of simulation datasets.',
+                                label = 'Input one value as the size of simulation datasets.',
                                 min_value = 10000, 
                                 max_value = 20000000,
                                 key='sample_size'
@@ -38,7 +38,7 @@ def app():
     # st.write(subsample_sizes_list,'List of Subsample Sizes:', subsample_sizes[0], subsample_sizes[1])
 
     sample_selectbox = st.selectbox(
-        label = 'Select simulated datasets with predefined distributions',
+        label = 'Select simulated datasets based on predefined distributions',
         options= ('Continuous Data - Normal Distribution', 
                 'Discrete Data - Normal Distribution',
                 'Continuous Data - Gamma Distribution',
@@ -50,14 +50,14 @@ def app():
 
     data_3sets = simulate_datasets(sample_selectbox, sample_size)
 
-    num_repeat = st.number_input(label = 'Input one number of repetition to compute confidence interval.',
+    num_repeat = st.number_input(label = 'Input one number of repetition to compute confidence intervals.',
                                 min_value = 50,
                                 max_value = 300,
                                 key = 'num_repeat'
                                 )
 
     metric_name = st.selectbox(
-        label = 'Select one metric to quantify data drift.',
+        label = 'Select one metric to quantify the data drift.',
         options= ("KS Statistic", 
                 "Cramer's V",
                 "Cliff's Delta",
@@ -72,15 +72,15 @@ def app():
                     "Cohen's D":CohenD_Effect_Size}
     st.write(f'Apply {metric_dict[metric_name].__name__} to measure the data drift.')
 
-    st.markdown('**Click the button blow to visualize distributions and evaluate the stability & effectiveness of one metric with different subsample size.**')
+    st.markdown('**Click the button blow to visualize distributions and evaluate the stability & the effectiveness of one metric with different subsample size.**')
 
-    if st.button(label=f"Visualize changes of mean & CI with different subsampling sizes", key='sub_size'):
+    if st.button(label=f"Visualize calculated mean & CI with different subsampling sizes", key='sub_size'):
         
-        st.write(f'**[Drift]** Plot two different large datasets distributions.')
+        st.write(f'**[Drift]** Plot distributions of two different large datasets.')
         st.pyplot(visual_two_simulate_dists(data_3sets[0], data_3sets[2], 
-                                            title=f'Distributions of datasets containing {sample_size} Observations'))
+                                            title=f'Each dataset contains {sample_size} observations'))
         
-        st.write(f'**Visualize how metric scores calculated with above datasets by changing subsample size.**')
+        st.write(f'**Visualize metric scores calculated with above datasets by changing subsample size.**')
         st.write(f'Repeatedly compute comparison scores with {metric_dict[metric_name].__name__}.')
         CIs_drift, fig_drift= st_two_resample_multifunc_visual(data_3sets[0], data_3sets[2],
                                                         f'Evaluate the Stability and the Effectiveness for {metric_dict[metric_name].__name__}',
@@ -93,7 +93,7 @@ def app():
 
         st.write(f'**[No Drift]** Plot two different large datasets distributions.')
         st.pyplot(visual_two_simulate_dists(data_3sets[0], data_3sets[1], 
-                                            title=f'Distributions of datasets containing {sample_size} Observations'))
+                                            title=f'Each large dataset contains {sample_size} observations'))
         
         st.write(f'**Visualize how metric scores calculated with above datasets by changing subsample size.**')
         st.write(f'Repeatedly compute comparison scores with {metric_dict[metric_name].__name__}.')
