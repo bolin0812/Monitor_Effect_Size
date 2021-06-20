@@ -1,6 +1,6 @@
 
 # Monitoring with Effect Size
-Evaluate statistical metrics and effect sizes in the context of measuring data drifts.
+Evaluate and apply various effect sizes in the context of measuring data drifts.
 <br/><br/>
 
 ## Precheck App
@@ -52,5 +52,4 @@ To find optimal number of repetitions and appropriate size of subsamples with si
 |  [Understanding Confidence Intervals (CIs) and Effect Size Estimation ](https://www.psychologicalscience.org/observer/understanding-confidence-intervals-cis-and-effect-size-estimation)  |  |
 |  [Effect Size](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118625392.wbecp048)  |  |
 |  [The simple difference formula: an approach to teaching nonparametric correlatio](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118625392.wbecp048)  | Introduce the Common Language Effect Size, Rank-Biserial Correlation, the Simple Difference Formula and the Wilcoxon Signed-rank Test. |
-|  [Multi-sample comparison of detrital age distributions](https://www.ucl.ac.uk/~ucfbpve/papers/VermeeschChemGeol2013.pdf)  | The KS statistic is most sensitive to the region near the modes of the sample distributions, and less sensitive
-to their tails. The KS effect size can be used as a dissimilar measure since it fulfills the triangle inequality. Also introduce Why p-values are unsuitable as a measure of dissimilarity |
+|  [Multi-sample comparison of detrital age distributions](https://www.ucl.ac.uk/~ucfbpve/papers/VermeeschChemGeol2013.pdf)  | The KS statistic is most sensitive to the region near the modes of the sample distributions, and less sensitive to their tails. The KS effect size can be used as a dissimilar measure since it fulfills the triangle inequality. Also introduce Why p-values are unsuitable as a measure of dissimilarity |
