@@ -246,7 +246,7 @@ def st_two_resample_multifunc_visual(a_sample, b_sample, ab_compare_type, true_s
     return all_CI, fig
 
 def stable_multifunc_data(data_root_path, data_a, data_b, features_filename,
-                          target='default', feature='pct_solde_limit_months'):
+                          target='target_name', feature='feature_name'):
     """
     Upload behavior monthly datasets
     Parameters:
@@ -345,7 +345,7 @@ def visual_multihist_distributions(data_root_path, data_tests, features_filename
 def stable_multifunc_visual_behavior(data_root_path, data_a, data_b, features_filename,
                                       stratify, sample_sizes_list,
                                       resample_nums=100, alpha=0.05, random_state=42,
-                                      target='default', feature='pct_solde_limit_months',
+                                      target='target_name', feature='feature_name',
                                       *func):
     """
     Check the mean & CI of input metric(s) 
@@ -436,7 +436,7 @@ def stable_multifunc_visual_behavior(data_root_path, data_a, data_b, features_fi
 
 def effect1size_baseline_multifunc_visual_behavior(data_root_path, data_a, features_filename, stratify, test_set_size,
                                                   resample_nums=100, alpha=0.05, random_state=42,
-                                                  target='default', feature='pct_solde_limit_months',
+                                                  target='target_name', feature='feature_name',
                                                   *func):
     """
     Visualize baseline scores (mean & CI) of input metric(s) with one specific sample size
