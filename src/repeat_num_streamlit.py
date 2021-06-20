@@ -43,7 +43,7 @@ def app():
     data_3sets = simulate_datasets(sample_selectbox, sample_size)
 
     subsample_size = st.slider(label = 'Select subsample size to compute confidence interval with different repetitions.',
-                                min_value = 10000,
+                                min_value = sample_size//10,
                                 max_value = sample_size,
                                 step=1000,
                                 key = 'subsample_size'
