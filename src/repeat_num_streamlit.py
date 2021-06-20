@@ -72,7 +72,7 @@ def app():
                                             title=f'Each large dataset contains {sample_size} observations'))
         
         st.write(f'\nVisualize how CI changes with different number of repetition.')
-        st.write(f'Subsample contains  is {subsample_size} observations.\nFollowing scores are computed by {metric_dict[metric_name].__name__}')
+        st.write(f'Subsample contains {subsample_size} observations.\nFollowing scores are computed by {metric_dict[metric_name].__name__}')
         opt_repeat_num = nums_repetitive_2subsample_metric(data_3sets[0], data_3sets[2],
                                                             subsample_size,
                                                             metric_dict[metric_name],
