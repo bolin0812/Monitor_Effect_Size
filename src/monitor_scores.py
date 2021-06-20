@@ -45,7 +45,7 @@ def subsample_stratify(df, sub_num, target, feature, random_state=42, stratify=T
 
 def repeated_func_scores_behavior(data_root_path, data_a, data_b, features_filename, stratify, func, size=192433,
                                   repeat_num=100, random_state=42,one_ref_test=True,
-                                  target='default',feature='pct_solde_limit_months'):
+                                  target='target_name',feature='feature_name'):
     """
     Compute  the mean & CI of input metric(s) based on one specific sample size
 
@@ -183,7 +183,7 @@ def multi_compare_ab_scores(data_root_path, data_a, data_b_list, features_filena
 
 
 def visual_monitor_behavior_list(data_b_list, score_dict, func, alpha=0.05,
-                                feature='pct_solde_limit_months',repeat_num=50, one_ref_test=False):
+                                feature='feature_name',repeat_num=50, one_ref_test=False):
     """ 
     Visualize CI and mean scores.
 
@@ -226,7 +226,7 @@ def visual_monitor_behavior_list(data_b_list, score_dict, func, alpha=0.05,
 
 def monitor_behavior_func_pipeline(data_root_path, data_a, data_b_list, features_filename,
                                    stratify, func, size, repeat_num, random_state, one_ref_test, 
-                                   target='default', feature='pct_solde_limit_months', alpha=0.05):
+                                   target='target_name', feature='feature_name', alpha=0.05):
     """
     One pipeline to compute key statistics and all comparison scores. 
 
