@@ -44,7 +44,7 @@ def app():
 
     subsample_size = st.slider(label = 'Select subsample size to compute confidence interval with different repetitions.',
                                 min_value = 10000,
-                                max_value = 200000,
+                                max_value = sample_size,
                                 step=1000,
                                 key = 'subsample_size'
                                 )
