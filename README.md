@@ -40,7 +40,7 @@ To find optimal number of repetitions and appropriate size of subsamples with si
     └── precheck_app.py                <-- Scripts to visualize with multiple pages in one streamlit app.  
 --------
 
-## Understand Effect Size
+## Effect Size Papers
 
 |    Effect Size Studies    |  Key Points  |
 |  :---------  | :------:  |
