@@ -20,7 +20,7 @@ def app():
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.header('Number of Repetition')
-    st.markdown('\n\nFind the optimal number of repetitions used to compute confidence interval.\n')
+    st.markdown('\n\nFind the optimal number of repetitions used to compute a percise confidence interval.\n')
 
     sample_size = st.number_input(
                                 label = 'Input one value used as the size of simulation datasets.',
@@ -76,7 +76,7 @@ def app():
         opt_repeat_num = nums_repetitive_2subsample_metric(data_3sets[0], data_3sets[2],
                                                             subsample_size,
                                                             metric_dict[metric_name],
-                                                            [20, 50, 100, 150, 200, 250, 300],
+                                                            [20, 50, 100, 150, 200, 250, 300, 350],
                                                             0.05, 
                                                             one_ref_test=True)
         st.pyplot(opt_repeat_num)
