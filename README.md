@@ -1,6 +1,6 @@
 
 # Monitoring with Effect Size
-Evaluate and apply various effect sizes in the context of measuring data drifts.
+Evaluate and apply various effect sizes in the context of measuring data drifts. After calculating the baseline with one metric, apply this metric to monitor incoming datasets.
 <br/><br/>
 
 ## Precheck Prototype
