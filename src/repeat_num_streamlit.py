@@ -50,19 +50,36 @@ def app():
                                 )
 
     metric_name = st.selectbox(
-        label = 'Select one metric to quantify data drift.',
+        label = 'Select one metric to measure data drifts.',
         options= ("KS Statistic", 
-                "Cramer's V",
+                "KS Test P-value",
+                "AD Statistic",
+                "AD Significance Level",
+                "MWU Statistic",
+                "MWU P-value",
                 "Cliff's Delta",
                 "Common Language Effect Size",
-                "Cohen's D"), 
+                "Chi2 Statistic",
+                "Chi2 P-value",
+                "Cramer's V",
+                "Cohen's D",
+                "Hedges' G"), 
         key='effect size',
     )
-    metric_dict = {"KS Statistic": ks_2samp_statistic,
-                "Cramer's V": chi2_gf_effsize,
+    metric_dict={"KS Statistic": ks_2samp_statistic,
+                "KS Test P-value":ks_2samp_pvalue,
+                "AD Statistic": ad_2sample_statistic,
+                "AD Significance Level": ad_2sample_significance_level,
+                "MWU Statistic":mwu_2sample_statistic,
+                "MWU P-value":mwu_2sample_pvalue,
                 "Cliff's Delta":CliffD_Effect_Size,
                 "Common Language Effect Size": CLE_Effect_Size,
-                "Cohen's D":CohenD_Effect_Size}
+                "Chi2 Statistic":chisquare_statistic,
+                "Chi2 P-value":chisquare_pvalue,
+                "Cramer's V": chi2_gf_effsize,
+                "Cohen's D":CohenD_Effect_Size，
+                "Hedges' G": HedgesG_Effect_Size }
+
     st.write(f'Apply {metric_dict[metric_name].__name__} to measure the data drift.')
     st.markdown('**Click the button blow to visualize distributions and evaluate ranges of confidence interval with different number of repetition.**')
     if st.button(label=f"Visualize changes of mean & CI with different numbers of repetition", key='sub_size'):
