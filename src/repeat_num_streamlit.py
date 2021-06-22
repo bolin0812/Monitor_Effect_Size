@@ -77,7 +77,7 @@ def app():
                 "Chi2 Statistic":chisquare_statistic,
                 "Chi2 P-value":chisquare_pvalue,
                 "Cramer's V": chi2_gf_effsize,
-                "Cohen's D":CohenD_Effect_Size，
+                "Cohen's D":CohenD_Effect_Size,
                 "Hedges' G": HedgesG_Effect_Size }
 
     st.write(f'Apply {metric_dict[metric_name].__name__} to measure the data drift.')
